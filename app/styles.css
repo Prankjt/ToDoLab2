@@ -1,0 +1,99 @@
+body {
+font-family: 'Open Sans', sans-serif;
+font-weight: 300;
+background: linear-gradient(to right, #f857a6, #ff5858);
+}
+
+.container {
+    background-color: white;
+    margin: 40px auto;
+    height: auto;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.title, .subtitle {
+    padding-left: 10px;
+    font-weight: 500;
+
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+.subtitle {
+    font-size: 12px;
+    margin-top: 0;
+}
+
+.filter-input {
+    margin: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #bbb;
+    color: #bbb;
+}
+
+.todo-list {    
+    width: 360px;
+    text-align: center;    
+}
+
+.task-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    /* border: 1px solid blue;     */
+}
+
+.task-name {
+    width: 80%;
+    display: inline-flex;
+}
+
+span {
+    margin-right: 10px;
+}
+
+.completed {
+    text-decoration: line-through;
+    margin: 10px;
+}
+
+a {
+    margin-right: 40px;
+    text-decoration: none;
+} 
+
+.complete-btn {
+    border: 1px solid #ff1493;
+    color: #ff1493;
+    border-radius: 8px;
+    background-color: white;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.add-input {
+    margin: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #bbb;
+    color: #bbb;
+}
+
+.add-btn {
+    margin: 10px;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ff69b4;
+    color: white;
+}

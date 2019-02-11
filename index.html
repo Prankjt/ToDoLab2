@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todoApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="app/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <title>practice</title>
+</head>
+
+<body>
+
+    <section class="container" ng-controller="TodoController as $ctrl">
+        <p class="title">TODO List</p>
+        <p class="subtitle">A place to store the things you have to do!</p>
+        <input class="filter-input" type="text" placeholder="Find your to-dos" ng-model="todoName">
+
+        <ol class="todo-list">
+            <li class="task-list" ng-repeat="todo in $ctrl.tasks | filter: todoName track by $index">
+                <div class="task-name">
+                    <span>{{ $index+1 }}.</span>
+                    <button class="complete-btn" ng-if="!todo.completed" ng-click="$ctrl.completeTask($index);">Complete</button>
+                    <p ng-class="{completed: todo.completed}">{{ todo.task }}</p>
+                </div>
+                <a href=""><i class="material-icons" ng-click="$ctrl.removeTask($index);">clear</i></a>
+
+            </li>
+        </ol>
+
+        <input class="add-input" type="text" placeholder="Add your to do" ng-model="$ctrl.newTask.name">
+        <button class="add-btn" ng-click="$ctrl.addTask($index);">Add</button>
+
+
+    </section>
+
+    <script src="https://code.angularjs.org/1.6.5/angular.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/app.controller.js"></script>
+</body>
+
+</html>
